@@ -1,14 +1,12 @@
-const express = require('express')
-const cors = require('cors')
+
 const multer = require('multer')
 const crypto = require('crypto')
-const app = express()
+
 function generateUID() {
   return crypto.randomBytes(5).toString('hex');
 }
 
-app.use(cors())
-app.use(express.json())
+
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
     return cb(null, "./bucket")

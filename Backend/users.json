@@ -1,4 +1,10 @@
 {
+  "1": {
+    "username": "ra",
+    "password": "1234",
+    "hashKey": "1",
+    "fileAuthKey": "1"
+  },
   "39e856d874e2c6eca81d0dcd84586746": {
     "": {
       "username": "",
@@ -37,10 +43,10 @@
     "hashKey": "5a6b0225213d3cf5fca53703806de6a25e5167c658ae7750fef1ba8e421a5737",
     "fileAuthKey": "e13206d097fe2b74cad3f38f0190348cb16a658ef2fc2e93a8f0929d2ee1b00d"
   },
-  "1": {
+  "f61013a96d422b9b98bcd7630b6dbf61": {
     "username": "ra",
     "password": "1234",
-    "hashKey": "1",
-    "fileAuthKey": "1"
+    "hashKey": "e741edfc6c895aff511ddadde8d040b43af8e96e18b01b5668d65d0c8b4b6926",
+    "fileAuthKey": "ea0a37ed9f22a3f8250b2a4ee4e9c86acbb78386f3419045325e36b9ea353211"
   }
 }

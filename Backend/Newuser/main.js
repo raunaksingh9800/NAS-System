@@ -1,5 +1,5 @@
 const express = require('express')
-const fs = require('fs');
+
 const crypto = require('crypto');
 
 const app = express();
@@ -9,16 +9,17 @@ const userFileManager = require('./filemanger');
 
 const filename = 'userFile.json';
 
-const fileUid = '';
-const fileData = {
-    filename: '',
-    url: '',
-    folder: ''
-};
-
-
 
 const CreateUser = (req, res) => {
+
+  const fileUid = '';
+  const fileData = {
+      filename: '',
+      url: '',
+      folder: ''
+  };
+
+
   const { username, password } = req.body;
   console.log(req.body.username)
 

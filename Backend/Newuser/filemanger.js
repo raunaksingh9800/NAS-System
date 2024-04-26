@@ -35,7 +35,7 @@ function addUser(filename, uid, fileData) {
     if (!existingData[uid]) {
         existingData[uid] = {};
     }
-t
+
     existingData[uid] = fileData;
     writeData(filename, existingData);
 }

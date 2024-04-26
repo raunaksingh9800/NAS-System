@@ -1,7 +1,6 @@
 const fs = require('fs');
 const userFileManager = require('../Newuser/filemanger');
 const checkforUId = loadSessions('users.json')
-let FileSystem = loadSessions('userFile.json')
 function loadSessions(Filename) {
     try {
       const data = fs.readFileSync(Filename, 'utf8');
