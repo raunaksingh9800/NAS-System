@@ -3,7 +3,7 @@ const cors = require('cors')
 const path = require('path');
 const serveIndex = require('serve-index')
 const CreateUser = require('./Newuser/main')
-const {ssIDHander , LoginHandler} = require('./Login/main')
+const { LoginHandler} = require('./Login/main')
 const {uploadhandler , uploadhandlerMiddlerwear} = require('./uploadApi/uploadhandler')
 const app = express()
 
@@ -32,9 +32,7 @@ app.post('/login', (req , res) => {
 })
 
 
-app.get('/ssid' , (req, res) => {
-  ssIDHander(req, res)
-})
+
 
 const unauth = {
   res : "UnAuth",

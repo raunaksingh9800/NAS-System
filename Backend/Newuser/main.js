@@ -7,7 +7,6 @@ app.use(express.json());
 
 const userFileManager = require('./filemanger');
 
-const filename = 'userFile.json';
 
 
 const CreateUser = (req, res) => {
@@ -25,8 +24,8 @@ const CreateUser = (req, res) => {
 
   const uid = generateUID();
 
-  userFileManager.initializeFile(filename);
-  userFileManager.addUserFile(filename, uid, fileUid, fileData);
+  userFileManager.initializeFile('userFile.json');
+  userFileManager.addUserFile('userFile.json', uid, fileUid, fileData);
 
   const hashKey = generateHashKey(password);
 
