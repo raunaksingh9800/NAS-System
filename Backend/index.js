@@ -5,6 +5,8 @@ const serveIndex = require('serve-index')
 const CreateUser = require('./Newuser/main')
 const { LoginHandler} = require('./Login/main')
 const {uploadhandler , uploadhandlerMiddlerwear} = require('./uploadApi/uploadhandler')
+const DeleteFileAPI = require('./DeleteFile/main')
+
 const app = express()
 
 
@@ -29,6 +31,10 @@ app.post('/newuser', (req, res) => {
 
 app.post('/login', (req , res) => {
   LoginHandler(req , res)
+})
+
+app.post('/deleteFile', (req , res) => {
+  DeleteFileAPI(req  , res)
 })
 
 
