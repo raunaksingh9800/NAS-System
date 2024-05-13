@@ -7,9 +7,10 @@ const { LoginHandler} = require('./Login/main')
 const {uploadhandler , uploadhandlerMiddlerwear} = require('./uploadApi/uploadhandler')
 const DeleteFileAPI = require('./DeleteFile/main')
 const upload = require('./uploadApi/main')
-
+const compression = require('compression')
 
 const app = express()
+app.use(compression())
 app.use(cors())
 app.use(express.json())   
 

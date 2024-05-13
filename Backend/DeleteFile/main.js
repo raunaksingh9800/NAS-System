@@ -1,29 +1,36 @@
 const fs = require('fs');
 
+/* 
+    BUG
+        ->  Deletes the whole json file data when request sent for a file which
+            is already deleted or even Wrong Cred
+
+*/
+
+
+
 const DeleteFileAPI = (req , res) => {
     const UID = req.body.uid;
     const FileUID = req.body.fuid;
     const FileName = req.body.fname;
-    let Err = [true , true , true];
-    fs.readFile('./userFile.json', 'utf8', (err, data) => {
-        if (err) {
-          console.error('Error reading file:', err);
-          Err[0] = false;
-        }
-        let jsonData;
-        try {
-          jsonData = JSON.parse(data);
-        } catch (error) {
-          console.error('Error parsing JSON:', error);
-          Err[1] = false;
-        }
+    var Err = [true , true , true];
+    jsonData = {};
 
-        fs.unlink(`./bucket/${FileUID}_${FileName}`, function (err) {
+    try {
+        const data = fs.readFileSync(Filename, 'utf8');
+        jsonData = JSON.parse(data);
+      } catch (error) {
+        Err[0] = false;
+        jsonData =  {};
+      }
+    fs.unlink(`./bucket/${FileUID}_${FileName}`, function (err) {
             if (err) throw err;
             console.log('File deleted!');
-          });
+    });
           
-        delete jsonData[UID][FileUID];
+        try {  delete jsonData[UID][FileUID] } 
+        catch(error) { res.status(404).send("Wrong Cred")  }
+
         const modifiedJson = JSON.stringify(jsonData, null, 2);
         fs.writeFile('./userFile.json', modifiedJson, 'utf8', (err) => {
           if (err) {
@@ -32,7 +39,7 @@ const DeleteFileAPI = (req , res) => {
           }
           console.log('JSON data has been modified and saved');
         });
-      });
+      
     
       if(Err[0] && Err[1] && Err[2])  {
         res.send(`Deleted - ${FileName}`)

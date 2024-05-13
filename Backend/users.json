@@ -54,5 +54,11 @@
     "password": "baller",
     "hashKey": "295e85e3f69c35b68f2d7e312720f055ed471a479e947b3be882594d2c5d9e9d",
     "fileAuthKey": "8e635bafcec8b78ad21037699abf6c6f622b12c6f432131f2482cf9eea84dc80"
+  },
+  "17fd78be98ae7f92382bb633fc9defde": {
+    "username": "bob",
+    "password": "bob",
+    "hashKey": "88de79ca32a29eeba3122eaa8e16ddf5283798f28c7ff067a932794942b1594d",
+    "fileAuthKey": "fd8055ef99eb16c8a6d04cc76f7c663b84f478595355f18385cea7e1df65ca5a"
   }
 }
