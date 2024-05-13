@@ -48,5 +48,11 @@
     "password": "1234",
     "hashKey": "e741edfc6c895aff511ddadde8d040b43af8e96e18b01b5668d65d0c8b4b6926",
     "fileAuthKey": "ea0a37ed9f22a3f8250b2a4ee4e9c86acbb78386f3419045325e36b9ea353211"
+  },
+  "4f31daecc1693effd6508d3a25c378aa": {
+    "username": "Atom200",
+    "password": "baller",
+    "hashKey": "295e85e3f69c35b68f2d7e312720f055ed471a479e947b3be882594d2c5d9e9d",
+    "fileAuthKey": "8e635bafcec8b78ad21037699abf6c6f622b12c6f432131f2482cf9eea84dc80"
   }
 }

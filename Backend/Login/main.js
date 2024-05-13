@@ -1,12 +1,4 @@
-
-const crypto = require('crypto');
 const fs = require('fs');
-
-
-
-
-//================================
-
 
 
 
@@ -24,9 +16,6 @@ function loadSessions(Filename) {
   }
 }
 
-//================================
-
-
 
 
 
@@ -42,7 +31,7 @@ const LoginHandler = (req, res) => {
         if (pwd[LoginDetatil[username].uid].password === password) {
     
         res.status(200).json({ uid: LoginDetatil[username].uid });
-        deleteSessionByKey(sessionKey)
+        
         } else {
 
         res.status(401).send('Incorrect password');
