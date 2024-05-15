@@ -60,5 +60,11 @@
     "password": "bob",
     "hashKey": "88de79ca32a29eeba3122eaa8e16ddf5283798f28c7ff067a932794942b1594d",
     "fileAuthKey": "fd8055ef99eb16c8a6d04cc76f7c663b84f478595355f18385cea7e1df65ca5a"
+  },
+  "c93092810af9988c299e712a5185db89": {
+    "username": "JACK",
+    "password": "AMA",
+    "hashKey": "66e09bf745f75a03684d26676524c32d464287740b69d8b3df91de7cf7886232",
+    "fileAuthKey": "805809136d5ad2192788ec2c43676026f0c15c17bd54a387813997e304d01f8f"
   }
 }

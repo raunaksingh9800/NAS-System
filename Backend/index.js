@@ -8,7 +8,7 @@ const {uploadhandler , uploadhandlerMiddlerwear} = require('./uploadApi/uploadha
 const DeleteFileAPI = require('./DeleteFile/main')
 const upload = require('./uploadApi/main')
 const compression = require('compression')
-
+const sendResp = require('./Search/main')
 const app = express()
 app.use(compression())
 app.use(cors())
@@ -34,6 +34,11 @@ app.post('/login', (req , res) => {
 app.post('/deleteFile', (req , res) => {
   DeleteFileAPI(req  , res)
 })
+
+app.post('/search' , (req, res) => {
+  sendResp(req, res);
+})
+
 
 const checkAccessToken = (req, res, next) => {
   const accessToken = req.query.token;

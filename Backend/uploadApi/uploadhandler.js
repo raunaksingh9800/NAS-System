@@ -1,14 +1,6 @@
 const fs = require('fs');
-const userFileManager = require('../Newuser/filemanger');
-const checkforUId = loadSessions('users.json')
-function loadSessions(Filename) {
-    try {
-      const data = fs.readFileSync(Filename, 'utf8');
-      return JSON.parse(data);
-    } catch (error) {
-      return {};
-    }
-  }
+const userFileManager = require('../FileManger/filemanger');
+const checkforUId =  userFileManager.loadSessions('./Json/users.json')
 
 const uploadhandler = (req, res) => {
     const UIDToken = req.query.uid;
@@ -22,9 +14,15 @@ const uploadhandler = (req, res) => {
             url: `ftp/${req.files[i].filename}`,
             folder: `${folderdata}`
         };
-      userFileManager.initializeFile('userFile.json');
-      userFileManager.addUserFile('userFile.json', UIDToken, fileUid, fileData);
+      const SearchIndex = {
+
+            [req.files[i].originalname] : fileUid
   
+        }
+      userFileManager.initializeFile('./Json/userFile.json');
+      userFileManager.addUserFile('./Json/userFile.json', UIDToken, fileUid, fileData);
+      userFileManager.initializeFile('./Json/SearchIndex.json');
+      userFileManager.addUserSearchIndex('./Json/SearchIndex.json', UIDToken, SearchIndex);
     }
 
 

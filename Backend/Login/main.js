@@ -1,25 +1,10 @@
 const fs = require('fs');
+const userFileManager = require('../FileManger/filemanger');
 
 
+let LoginDetatil = userFileManager.loadSessions('./Json/logindetails.json')
 
-let LoginDetatil = loadSessions('logindetails.json')
-
-let pwd = loadSessions('users.json')
-
-
-function loadSessions(Filename) {
-  try {
-    const data = fs.readFileSync(Filename, 'utf8');
-    return JSON.parse(data);
-  } catch (error) {
-    return {};
-  }
-}
-
-
-
-
-
+let pwd = userFileManager.loadSessions('./Json/users.json')
 
 const LoginHandler = (req, res) => {
     const { username, password } = req.body;

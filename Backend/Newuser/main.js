@@ -5,7 +5,7 @@ const crypto = require('crypto');
 const app = express();
 app.use(express.json());
 
-const userFileManager = require('./filemanger');
+const userFileManager = require('../FileManger/filemanger');
 
 
 
@@ -24,8 +24,8 @@ const CreateUser = (req, res) => {
 
   const uid = generateUID();
 
-  userFileManager.initializeFile('userFile.json');
-  userFileManager.addUserFile('userFile.json', uid, fileUid, fileData);
+  userFileManager.initializeFile('./Json/userFile.json');
+  userFileManager.addUserFile('./Json/userFile.json', uid, fileUid, fileData);
 
   const hashKey = generateHashKey(password);
 
@@ -43,11 +43,17 @@ const CreateUser = (req, res) => {
   const LoginDe = {
     uid : `${uid}` ,
   }
+  const SearchIndex = {
+    "files": {
+    }
+  }
 
-  userFileManager.initializeFile('users.json');
-  userFileManager.addUser('users.json', uid, userData);
-  userFileManager.initializeFile('logindetails.json');
-  userFileManager.addUser('logindetails.json', username, LoginDe);
+  userFileManager.initializeFile('./Json/users.json');
+  userFileManager.addUser('./Json/users.json', uid, userData);
+  userFileManager.initializeFile('./Json/logindetails.json');
+  userFileManager.addUser('./Json/logindetails.json', username, LoginDe);
+  userFileManager.initializeFile('./Json/SearchIndex.json');
+  userFileManager.addUser('./Json/SearchIndex.json', uid, SearchIndex);
   res.send("ceated")
 
 
