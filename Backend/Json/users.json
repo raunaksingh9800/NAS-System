@@ -1,0 +1,70 @@
+{
+  "1": {
+    "username": "ra",
+    "password": "1234",
+    "hashKey": "1",
+    "fileAuthKey": "1"
+  },
+  "39e856d874e2c6eca81d0dcd84586746": {
+    "": {
+      "username": "",
+      "password": "",
+      "hashKey": "",
+      "fileAuthKey": ""
+    }
+  },
+  "c1071559ba8af1e681217b914bdcfbcc": {
+    "username": "",
+    "password": "",
+    "hashKey": "",
+    "fileAuthKey": ""
+  },
+  "b6dc54d886d55588d0fb2a9d1bd87b3d": {
+    "username": "test14hfhfd3",
+    "password": "123",
+    "hashKey": "2d444e4ecd2cb663401e47dfa96dc13d024630acdded4079a66d5cc1a04c6437",
+    "fileAuthKey": "63146d2fc37085ed2ff4c98b968e06d97bee2d765f054f045e9a0db12483c649"
+  },
+  "257da41693db20d8505eb5542a724974": {
+    "username": "test14hfhfd3",
+    "password": "123",
+    "hashKey": "903fa76abdd0905c50d137b130d67fa7da628a5b08c6f7bdb5cc1b441dea850a",
+    "fileAuthKey": "a050c4bad46fd38f246aeffb5f5a7b616c5fe0d593e219e4e3a20f6300a1a7a0"
+  },
+  "a340adc83096f2a0b06e51e022183b0f": {
+    "username": "admin",
+    "password": "1234",
+    "hashKey": "bf9c785eae25d5f4e2480752b7e882d42259674c096c8128fe0e06ed810a91df",
+    "fileAuthKey": "2e316001d8dc9b74fdc168f0ecabe3615289a44a985208f6c748633f3c48be5c"
+  },
+  "3acdcccb0e82122f7c4f7359f1138bde": {
+    "username": "ra",
+    "password": "1234",
+    "hashKey": "5a6b0225213d3cf5fca53703806de6a25e5167c658ae7750fef1ba8e421a5737",
+    "fileAuthKey": "e13206d097fe2b74cad3f38f0190348cb16a658ef2fc2e93a8f0929d2ee1b00d"
+  },
+  "f61013a96d422b9b98bcd7630b6dbf61": {
+    "username": "ra",
+    "password": "1234",
+    "hashKey": "e741edfc6c895aff511ddadde8d040b43af8e96e18b01b5668d65d0c8b4b6926",
+    "fileAuthKey": "ea0a37ed9f22a3f8250b2a4ee4e9c86acbb78386f3419045325e36b9ea353211"
+  },
+  "4f31daecc1693effd6508d3a25c378aa": {
+    "username": "Atom200",
+    "password": "baller",
+    "hashKey": "295e85e3f69c35b68f2d7e312720f055ed471a479e947b3be882594d2c5d9e9d",
+    "fileAuthKey": "8e635bafcec8b78ad21037699abf6c6f622b12c6f432131f2482cf9eea84dc80"
+  },
+  "17fd78be98ae7f92382bb633fc9defde": {
+    "username": "bob",
+    "password": "bob",
+    "hashKey": "88de79ca32a29eeba3122eaa8e16ddf5283798f28c7ff067a932794942b1594d",
+    "fileAuthKey": "fd8055ef99eb16c8a6d04cc76f7c663b84f478595355f18385cea7e1df65ca5a"
+  },
+  "c93092810af9988c299e712a5185db89": {
+    "username": "JACK",
+    "password": "AMA",
+    "hashKey": "66e09bf745f75a03684d26676524c32d464287740b69d8b3df91de7cf7886232",
+    "fileAuthKey": "805809136d5ad2192788ec2c43676026f0c15c17bd54a387813997e304d01f8f"
+  }
+}

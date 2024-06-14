@@ -1,0 +1,23 @@
+{
+    "UID 1" : {
+        "File uid 1" : {
+            "filename": "",
+            "url" : "",
+            "folder": ""
+        },
+        "Filee uid 2": {
+            "filename": "",
+            "url" : "",
+            "folder": ""
+        }
+
+    },
+    "UID 2" : {
+        "File uid": {
+            "filename": "",
+            "url" : "",
+            "folder": ""
+        }
+    }
+
+}

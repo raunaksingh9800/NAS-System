@@ -1,0 +1,21 @@
+{
+  "user1_uid": {
+    "files": {
+      "file1_name": "file1_uid",
+      "file2_name": "file2_uid",
+      "file3_name": "file3_uid"
+    }
+  },
+  "user2_uid": {
+    "files": {
+      "file4_name": "file4_uid",
+      "file5_name": "file5_uid"
+    }
+  },
+  "c93092810af9988c299e712a5185db89": {
+    "files": {
+      "bell_timings.pdf": "b11f8ff972",
+      "pkt.pcap": "8d393a3217"
+    }
+  }
+}

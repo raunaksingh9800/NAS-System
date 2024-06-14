@@ -1,0 +1,21 @@
+{
+  "test14hfhfd3": {
+    "password": "123",
+    "uid": "257da41693db20d8505eb5542a724974"
+  },
+  "admin": {
+    "uid": "a340adc83096f2a0b06e51e022183b0f"
+  },
+  "ra": {
+    "uid": "f61013a96d422b9b98bcd7630b6dbf61"
+  },
+  "Atom200": {
+    "uid": "4f31daecc1693effd6508d3a25c378aa"
+  },
+  "bob": {
+    "uid": "17fd78be98ae7f92382bb633fc9defde"
+  },
+  "JACK": {
+    "uid": "c93092810af9988c299e712a5185db89"
+  }
+}
