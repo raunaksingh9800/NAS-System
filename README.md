@@ -6,6 +6,10 @@
 
 Version 1.0.0 is still under development.
 
+## Project Structure
+
+- [Backend](./Backend)
+- [Frontend](https://github.com/your-username/frontend)
 
 ## Tech Stack
 
