@@ -41,6 +41,7 @@ async function askYorN(question) {
 
 
 async function main() {
+    const AUTHKEY = generateUID()
     nasjsArt()
     print(chalk.greenBright.bold("Welcome to NAS Js Backend! 😄 "))
     linespace()
@@ -54,10 +55,10 @@ async function main() {
         linespace()
         print(chalk.white(" > YOUR CRED ARE:"))
         print(chalk.whiteBright("\t IPv4 : " + chalk.bold(ip.address())))
-        print(chalk.whiteBright("\t Auth Key : " + chalk.bold(generateUID())))
+        print(chalk.whiteBright("\t Auth Key : " + chalk.bold(AUTHKEY)))
         linespace()
         if(await askYorN("Do you want to Open Your Default Browser")=="Yes"){
-            await open('https://google.com');
+            await open(`http://localhost:3000/admin/1?ip=${ip.address()}&authkey=${AUTHKEY}`);
         }
     }
     else process.exit(0);
