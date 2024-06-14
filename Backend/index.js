@@ -9,7 +9,7 @@ const {uploadhandler , uploadhandlerMiddlerwear} = require('./uploadApi/uploadha
 const DeleteFileAPI = require('./DeleteFile/main')
 const upload = require('./uploadApi/main')
 const compression = require('compression')
-const sendResp = require('./Search/main')
+const sendResp = require('./Search/main');
 const app = express()
 app.use(compression())
 app.use(cors())
@@ -65,3 +65,4 @@ app.get("/*" , (req , res) => {
 app.listen(3001, () => {
   console.log("Server is running")
 })
+
