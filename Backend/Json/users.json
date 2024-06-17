@@ -70,7 +70,7 @@
   "95438e61be5f87ab1a2a86b77f75b977e3867c65b0b9927d640ba8ee8d775a87": {
     "username": "uncle",
     "fileAuthKey": "4d3759afeebf8bb809a9f62295fcb864475dc5decdc56a6bf98ce52bc6e9df6e",
-    "ip": "",
-    "refreshToken": ""
+    "ip": "::1",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiOTU0MzhlNjFiZTVmODdhYjFhMmE4NmI3N2Y3NWI5NzdlMzg2N2M2NWIwYjk5MjdkNjQwYmE4ZWU4ZDc3NWE4NyIsImlhdCI6MTcxODY0MjIyMH0.-NshhKqxLN1Mas1Yt1NaOGOwy9aFQ2yHoPnGNdUQyd4"
   }
 }
