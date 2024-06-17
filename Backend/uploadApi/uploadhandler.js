@@ -33,7 +33,7 @@ const uploadhandler = (req, res) => {
 const uploadhandlerMiddlerwear = (req, res , next) => {
      const UIDToken = req.query.uid;
      const FileAuthToken = req.query.fat;
-     if(Object.keys(checkforUId).includes(UIDToken) && checkforUId[UIDToken].fileAuthKey == FileAuthToken){
+     if(checkforUId[UIDToken] != undefined && checkforUId[UIDToken].fileAuthKey == FileAuthToken){
         next()
      }
      else {
