@@ -66,5 +66,11 @@
     "password": "AMA",
     "hashKey": "66e09bf745f75a03684d26676524c32d464287740b69d8b3df91de7cf7886232",
     "fileAuthKey": "805809136d5ad2192788ec2c43676026f0c15c17bd54a387813997e304d01f8f"
+  },
+  "95438e61be5f87ab1a2a86b77f75b977e3867c65b0b9927d640ba8ee8d775a87": {
+    "username": "uncle",
+    "fileAuthKey": "4d3759afeebf8bb809a9f62295fcb864475dc5decdc56a6bf98ce52bc6e9df6e",
+    "ip": "",
+    "refreshToken": ""
   }
 }
