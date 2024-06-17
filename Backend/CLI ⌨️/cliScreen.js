@@ -54,35 +54,35 @@ async function initForCred() {
     CredFile["AUTHKEY"].val = AUTHKEY;
     userFileManager.writeData('./Json/admincred.json', CredFile)
     linespace()
-    print(chalk.whiteBright(" > Please Follow the Steps Given Below: 👇 "))
-    print(chalk.white.bold("\t 1. After You Finish Reading this you will be taken to your default broswer"))
-    print(chalk.white.bold("\t 2. Over there you will be asked to enter two Things You Home IP address and Auth Key " + chalk.green("(The Details will given below)")))
+    print(chalk.whiteBright(" > Please follow the steps given below: 👇 "))
+    print(chalk.white.bold("\t 1. After you finish reading this you will be taken to your default broswer."))
+    print(chalk.white.bold("\t 2. Over there you will be asked to enter two things you home IP Address and Authentication key " + chalk.green("(The details will given below)")))
     linespace()
     if(await askYorN("Do you want to continue?") == "Yes") {
         linespace()
-        print(chalk.yellowBright("👍 OK Lets Start"))
+        print(chalk.yellowBright("👍 OK lets start"))
         linespace()
-        print(chalk.white(" > YOUR CRED ARE:"))
+        print(chalk.white(" > YOUR CREDENTIALS ARE:"))
         print(chalk.whiteBright("\t IPv4 : " + chalk.bold(IP)))
         print(chalk.whiteBright("\t Auth Key : " + chalk.bold(AUTHKEY)))
-        print(chalk.redBright.bold("\t DONT SHARE THEM WIHT ANYONE"))
+        print(chalk.redBright.bold("\t DO NOT SHARE IT WITH ANYONE"))
         linespace()
-        if(await askYorN("Do you want to Open Your Default Browser")=="Yes"){
+        if(await askYorN("Do you want to open your default browser?")=="Yes"){
             await open(`http://localhost:3000/admin/1?ip=${IP}&authkey=${AUTHKEY}`);
         }
         linespace()
-        print(chalk.white(" > If The Link did not open automatically Copy the Link given below into your browser 👇"))
+        print(chalk.white(" > If the link did not open automatically copy the link given below into your browser 👇"))
         print(chalk.white("LINK : " + chalk.bold.blueBright(`http://localhost:3000/admin/1?ip=${IP}&authkey=${AUTHKEY}`)))
         linespace()
 
-        print(chalk.greenBright("Congratulations The NAS Js Backend Has been initiated"))
+        print(chalk.greenBright("Congratulations the NAS JS backend has been initiated successfully! 😄"))
         linespace();
-        print(chalk.white("After This Program Quits Run " + chalk.green.bold(" node index.js ") + chalk.white("In Your Terminal/Command Line") ))
-        print(chalk.white("This is the final Step"))
+        print(chalk.white("Almost there, the next step is the final step 👇"))
+        print(chalk.white("After this program terminates run the following command 👉 " + chalk.green.bold(" node index.js ") + chalk.white("in your terminal") ))
         linespace()
         print(chalk.white(" > Status : " + chalk.bold.green("SUCCESS 🎉")))
         linespace();
-        print(chalk.greenBright("Thanks For using NAS Js"))
+        print(chalk.greenBright("Thanks for using NAS JS 😎"))
         linespace();
     
 
@@ -99,8 +99,8 @@ async function main() {
     }
     else if (CredFile["IP"].val != null || CredFile["AUTHKEY"].val != null) {
         linespace()
-        print(chalk.whiteBright("Seems Like The Backend is already Initiated"))
-        if(await askYorN("Do You Want to reinitiate it?")=="Yes") {initForCred()} else {process.exit(0);}
+        print(chalk.whiteBright("Looks like the backend has already been initiated."))
+        if(await askYorN("Do you want to reinitiate it?")=="Yes") {initForCred()} else {process.exit(0);}
     }
 
     
