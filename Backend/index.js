@@ -7,6 +7,7 @@ const CreateUser = require('./Newuser/main')
 const { LoginHandler} = require('./Login/main')
 const {uploadhandler , uploadhandlerMiddlerwear} = require('./uploadApi/uploadhandler')
 const DeleteFileAPI = require('./DeleteFile/main')
+const {TokenHandler} = require('./getToken/main')
 const upload = require('./uploadApi/main')
 const compression = require('compression')
 const sendResp = require('./Search/main');
@@ -23,6 +24,11 @@ app.get('/', function(req, res) {
 app.post('/upload', uploadhandlerMiddlerwear , upload.any() , (req, res) => {
   uploadhandler(req, res)
 })
+
+app.post('/getToken', (req, res) => {
+  TokenHandler(req , res)
+})
+
 
 app.post('/newuser', (req, res) => {
   CreateUser(req , res);
