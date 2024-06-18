@@ -4,12 +4,25 @@
 
 # NAS Js
 
-Version 1.0.0 is still under development.
+Version 1.0.0 is almost done.
 
 ## Project Structure
 
 - [Backend](./Backend)
 - [Frontend](https://github.com/raunaksingh9800/frontend)
+
+## Preview
+
+##### Check Out The Project - [Click Me](https://nas-js.vercel.app)
+Link - nas-js.vercel.app
+
+#### Home Page
+![alt text](https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG/HOME-PAGE.png)
+
+#### Login Page
+![alt text](https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG/LOGIN%20-%20Desktop.png)
+
+
 
 ## Tech Stack
 
@@ -18,8 +31,4 @@ Version 1.0.0 is still under development.
 **Server:** Node, Express
 
 
-## Demo
 
-This is a demo image
-
-![alt text](https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG/LOGIN%20-%20Desktop.png)
