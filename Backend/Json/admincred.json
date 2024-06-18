@@ -3,6 +3,9 @@
     "val": "192.168.31.180"
   },
   "AUTHKEY": {
-    "val": "4bbe604ca05d6e05"
+    "val": "51e51088d919330d"
+  },
+  "FRONTENDIP": {
+    "val": "vercel.com"
   }
 }
