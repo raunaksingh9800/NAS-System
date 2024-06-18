@@ -22,4 +22,4 @@ Version 1.0.0 is still under development.
 
 This is a demo image
 
-![alt text](https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG/LOGIN%20-%20Desktop.png)
+![alt text](https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG🌌/LOGIN%20-%20Desktop.png)
