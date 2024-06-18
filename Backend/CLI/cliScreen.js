@@ -1,16 +1,34 @@
-
 const chalk = require('chalk')
 const inquirer = require('inquirer');
 const open = require('open')
 const crypto = require('crypto')
-
-
+const http = require('http');
+const https = require('https');
 const userFileManager = require('../FileManger/filemanger')
-
 const print = console.log;
 var ip = require("ip");
 
 
+function pingUrl(url) {
+    return new Promise((resolve, reject) => {
+        const protocol = url.startsWith('https') ? https : http;
+        const req = protocol.get(url, (res) => {
+            // If the status code is in the 200 range, the URL is alive
+            if (res.statusCode >= 200 && res.statusCode < 300) {
+                resolve(true);
+            } else {
+                resolve(false);
+            }
+        });
+
+        req.on('error', (err) => {
+            // Any error indicates the URL is not alive
+            resolve(false);
+        });
+
+        req.end();
+    });
+}
 function generateUID() {
     return crypto.randomBytes(8).toString('hex');
   }
@@ -29,12 +47,24 @@ function linespace(){
     print('\n')
 }
 
-
+async function askForPing(question) {
+    const ans =  await inquirer.prompt({
+        name : "answer",
+        type : "input",
+        message : question,
+        default() {
+            return "https://localhost:3000"
+        }
+    }).then((answer)=>{
+        return answer
+    })
+    return ans.answer
+} 
 
 async function askYorN(question) {
     const ans =  await inquirer.prompt({
         name : "answer",
-        type : 'list',
+        type : "list",
         message : question,
         choices:['Yes', 'No'],
         default() {
@@ -52,7 +82,7 @@ async function initForCred() {
     const IP = ip.address()
     CredFile["IP"].val = IP;
     CredFile["AUTHKEY"].val = AUTHKEY;
-    userFileManager.writeData('./Json/admincred.json', CredFile)
+    var cliIP;
     linespace()
     print(chalk.whiteBright(" > Please follow the steps given below: 👇 "))
     print(chalk.white.bold("\t 1. After you finish reading this you will be taken to your default broswer."))
@@ -62,19 +92,27 @@ async function initForCred() {
         linespace()
         print(chalk.yellowBright("👍 OK lets start"))
         linespace()
+        const isFrontEndOnSameServer = await pingUrl("http://localhost:3000")
+        linespace()
         print(chalk.white(" > YOUR CREDENTIALS ARE:"))
         print(chalk.whiteBright("\t IPv4 : " + chalk.bold(IP)))
         print(chalk.whiteBright("\t Auth Key : " + chalk.bold(AUTHKEY)))
         print(chalk.redBright.bold("\t DO NOT SHARE IT WITH ANYONE"))
         linespace()
+        if(!isFrontEndOnSameServer) {
+            print(chalk.red(" > Seems like the frontend is on a different machine or there's some error on our side"))
+            cliIP = await askForPing("Can You Please Give us the IP address of the frontend")
+            print(cliIP);
+            CredFile["FRONTENDIP"].val = cliIP;
+        }
         if(await askYorN("Do you want to open your default browser?")=="Yes"){
-            await open(`http://localhost:3000/admin/1?ip=${IP}&authkey=${AUTHKEY}`);
+            await open(`http://${cliIP}/admin/1?ip=${IP}&authkey=${AUTHKEY}`);
         }
         linespace()
         print(chalk.white(" > If the link did not open automatically copy the link given below into your browser 👇"))
-        print(chalk.white("LINK : " + chalk.bold.blueBright(`http://localhost:3000/admin/1?ip=${IP}&authkey=${AUTHKEY}`)))
+        print(chalk.white("LINK : " + chalk.bold.blueBright(`http://${cliIP}/admin/1?ip=${IP}&authkey=${AUTHKEY}`)))
         linespace()
-
+        userFileManager.writeData('./Json/admincred.json', CredFile)
         print(chalk.greenBright("Congratulations the NAS JS backend has been initiated successfully! 😄"))
         linespace();
         print(chalk.white("Almost there, the next step is the final step 👇"))
