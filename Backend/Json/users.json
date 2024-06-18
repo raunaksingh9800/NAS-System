@@ -71,6 +71,12 @@
     "username": "uncle",
     "fileAuthKey": "4d3759afeebf8bb809a9f62295fcb864475dc5decdc56a6bf98ce52bc6e9df6e",
     "ip": "::1",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiOTU0MzhlNjFiZTVmODdhYjFhMmE4NmI3N2Y3NWI5NzdlMzg2N2M2NWIwYjk5MjdkNjQwYmE4ZWU4ZDc3NWE4NyIsImlhdCI6MTcxODY0MjIyMH0.-NshhKqxLN1Mas1Yt1NaOGOwy9aFQ2yHoPnGNdUQyd4"
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiOTU0MzhlNjFiZTVmODdhYjFhMmE4NmI3N2Y3NWI5NzdlMzg2N2M2NWIwYjk5MjdkNjQwYmE4ZWU4ZDc3NWE4NyIsImlhdCI6MTcxODczMDQ3NH0.UPgIq5DCNOvRaZbCgGjrSPgOSoigHNdMl5x7L7A2k4I"
+  },
+  "4c26991843b5498e99ef26e6cf45c4eecd9e6890436f619054aaa8790b35967c": {
+    "username": "bob",
+    "fileAuthKey": "2c143368c32c0719590a30eb92f3f6c15f55b37829eaba644d81fe64b788c1af",
+    "ip": "::1",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNGMyNjk5MTg0M2I1NDk4ZTk5ZWYyNmU2Y2Y0NWM0ZWVjZDllNjg5MDQzNmY2MTkwNTRhYWE4NzkwYjM1OTY3YyIsImlhdCI6MTcxODcyOTY0NH0.NEVuLChioUGzKl0Uy1wm2lxCYQX2vouR3jE6-42VbMM"
   }
 }
