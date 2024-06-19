@@ -1,7 +1,7 @@
 
 
-![alt text](https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG/LOGO.png)
-
+![alt t
+<img src="https://via.placeholder.com/150](https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG/LOGO.png" alt="NAS Js Logo" width="300" height="200">
 
 Version 1.0.0 is almost done.
 
