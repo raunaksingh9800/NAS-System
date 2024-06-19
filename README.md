@@ -1,7 +1,8 @@
 
 
-
-<img src="https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG/LOGO.png" alt="NAS Js Logo" width="200" height="100">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG/LOGO.png" alt="NAS Js Logo" width="300" height="150">
+</p>
 
 Version 1.0.0 is almost done.
 
