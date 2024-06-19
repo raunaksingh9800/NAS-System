@@ -3,6 +3,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG/LOGO.png" alt="NAS Js Logo" width="300" height="150">
 </p>
+![Logo](https://raw.githubusercontent.com/raunaksingh9800/NAS-System/main/IMG/LOGO.png)
 
 <p align="center"><b>The Storage System For Anyone</b></p>
 
