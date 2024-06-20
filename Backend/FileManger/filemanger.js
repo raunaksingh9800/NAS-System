@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function loadSessions(Filename) {
+const loadSessions  = (Filename)=> {
     try {
       const data = fs.readFileSync(Filename, 'utf8');
       return JSON.parse(data);
@@ -9,23 +9,23 @@ function loadSessions(Filename) {
     }
   }
 
-function initializeFile(filename) {
+const initializeFile = (filename)=> {
     if (!fs.existsSync(filename)) {
         fs.writeFileSync(filename, '{}');
     }
 }
 
-function readData(filename) {
+const readData = (filename)=> {
     return JSON.parse(fs.readFileSync(filename, 'utf8'));
 }
 
 
-function writeData(filename, data) {
+const writeData = (filename, data)=> {
     fs.writeFileSync(filename, JSON.stringify(data, null, 2));
 }
 
 
-function addUserFile(filename, uid, fileUid, fileData) {
+const addUserFile=(filename, uid, fileUid, fileData)=> {
     const existingData = readData(filename);
     if (!existingData[uid]) {
         existingData[uid] = {};
@@ -35,7 +35,7 @@ function addUserFile(filename, uid, fileUid, fileData) {
     writeData(filename, existingData);
 }
 
-function addUser(filename, uid, fileData) {
+const addUser=(filename, uid, fileData)=> {
   
     const existingData = readData(filename);
 
@@ -48,7 +48,7 @@ function addUser(filename, uid, fileData) {
     writeData(filename, existingData);
 }
 
-function addUserSearchIndex(filename, uid, fileData) {
+const addUserSearchIndex=(filename, uid, fileData)=> {
     const existingData = readData(filename);
 
    
@@ -59,7 +59,7 @@ function addUserSearchIndex(filename, uid, fileData) {
     writeData(filename, existingData);
 }
 
-function addUserSearchIndexDelete(filename, uid, fname) {
+const addUserSearchIndexDelete = (filename, uid, fname) => {
     const existingData = readData(filename);
 
    
@@ -70,7 +70,7 @@ function addUserSearchIndexDelete(filename, uid, fname) {
     writeData(filename, existingData);
 }
 
-function deleteUserFile(filename, uid, FileUID) {
+const deleteUserFile = (filename, uid, FileUID) => {
     const existingData = readData(filename);
     if (!existingData[uid]) {
         existingData[uid] = {};
