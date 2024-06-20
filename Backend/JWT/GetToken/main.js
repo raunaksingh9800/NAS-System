@@ -1,5 +1,5 @@
 const fs = require('fs');
-const userFileManager = require('../FileManger/filemanger');
+const userFileManager = require('../../JsonFileManger/filemanger');
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
@@ -15,9 +15,10 @@ const TokenHandler = (req, res) => {
         const accessToken = generateAccessToken({ name: data.payload })
         res.json({ accessToken: accessToken })
     })
+    UserData = null;
 }
 
-function generateAccessToken(userSecret) {
+const generateAccessToken = (userSecret) => {
   return jwt.sign(userSecret, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1800s' })
 }
 

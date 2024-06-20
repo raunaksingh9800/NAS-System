@@ -4,12 +4,12 @@ const open = require('open')
 const crypto = require('crypto')
 const http = require('http');
 const https = require('https');
-const userFileManager = require('../FileManger/filemanger')
+const userFileManager = require('../JsonFileManger/filemanger')
 const print = console.log;
 var ip = require("ip");
 
 
-function pingUrl(url) {
+const pingUrl = (url) => {
     return new Promise((resolve, reject) => {
         const protocol = url.startsWith('https') ? https : http;
         const req = protocol.get(url, (res) => {
@@ -29,10 +29,10 @@ function pingUrl(url) {
         req.end();
     });
 }
-function generateUID() {
+const  generateUID = () => {
     return crypto.randomBytes(8).toString('hex');
   }
-function nasjsArt() {
+const  nasjsArt = () => {
     console.log(chalk.blueBright(` 
         ███╗   ██╗ █████╗ ███████╗         ██╗███████╗
         ████╗  ██║██╔══██╗██╔════╝         ██║██╔════╝
@@ -43,11 +43,11 @@ function nasjsArt() {
             `,))
 }
 
-function linespace(){
+const linespace = () =>{
     print('\n')
 }
 
-async function askForPing(question) {
+const askForPing = async (question) => {
     const ans =  await inquirer.prompt({
         name : "answer",
         type : "input",
@@ -61,7 +61,7 @@ async function askForPing(question) {
     return ans.answer
 } 
 
-async function askYorN(question) {
+const askYorN  = async (question) => {
     const ans =  await inquirer.prompt({
         name : "answer",
         type : "list",
@@ -77,7 +77,7 @@ async function askYorN(question) {
 } 
 
 let CredFile = userFileManager.loadSessions('./Json/admincred.json')
-async function initForCred() {
+const initForCred = async () => {
     const AUTHKEY = generateUID()
     const IP = ip.address()
     CredFile["IP"].val = IP;

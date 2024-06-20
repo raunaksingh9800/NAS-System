@@ -5,7 +5,7 @@ const crypto = require('crypto');
 const app = express();
 app.use(express.json());
 
-const userFileManager = require('../../FileManger/filemanger');
+const userFileManager = require('../../JsonFileManger/filemanger');
 
 
 
@@ -55,7 +55,7 @@ const CreateUser = (req, res) => {
 
 
 
-function hashCredentials(username, password) {
+const hashCredentials = (username, password) => {
     const hash = crypto.createHash('sha256');
     hash.update(username + password);
     return hash.digest('hex');
@@ -65,7 +65,7 @@ function hashCredentials(username, password) {
 
 
 // Function to generate file auth key
-function generateFileAuthKey() {
+const generateFileAuthKey = ()  => {
   return crypto.randomBytes(32).toString('hex');
 }
 

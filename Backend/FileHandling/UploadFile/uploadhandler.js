@@ -1,5 +1,5 @@
 const fs = require('fs');
-const userFileManager = require('../FileManger/filemanger');
+const userFileManager = require('../../JsonFileManger/filemanger');
 const checkforUId =  userFileManager.loadSessions('./Json/users.json')
 
 const uploadhandler = (req, res) => {
