@@ -1,5 +1,5 @@
 const fs = require('fs');
-const userFileManager = require('../FileManger/filemanger');
+const userFileManager = require('../../FileManger/filemanger');
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 

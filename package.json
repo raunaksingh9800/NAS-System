@@ -1,12 +1,21 @@
 {
-  "name": "NASJs",
+  "name": "NASjs",
   "version": "1.0.0",
-  "description": "The Storage System For Anyone",
+  "description": "",
   "scripts": {
-    "dependencies:install": "npm i && concurrently \"cd Backend && npm i\" \"cd frontend && npm i\"",
-    "start": "concurrently \"cd Backend && npm run start\" \"cd frontend && npm run dev\"",
+    
+    "dev:install": "npm i && concurrently \"cd client && npm i\" \"cd server && npm i\"",
+    "lint": "concurrently \"cd frontend && npm run dev\" \"cd Backend && npm run start\"",
+    "startFrontend" : "concurrently \"cd frontend && npm run dev\""
+
   },
   "keywords": [],
-  "author": "Raunak Singh",
-  "license": "MIT License",
+  "author": "Raunak",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "husky": "^7.0.4"
+  }
 }
+
+
