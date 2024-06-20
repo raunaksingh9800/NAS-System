@@ -5,7 +5,7 @@
 </p>
 
 <p align="center"><b>The Storage System For Anyone</b></p>
-<p align="center">Under Developmentt</p>
+<p align="center">Under Development</p>
 
 ## Project Structure
 
