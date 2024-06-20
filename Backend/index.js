@@ -12,13 +12,17 @@
  *     ██  ██      ██          ████  ██ 
  *      ████       ██    ██     ██████  
  * 
- *  Author: Raunak Singh
- *  Data : 20 Jun 2024
+ *  Author : Raunak Singh
+ *  Date 📅 : 20 Jun 2024
  * 
- *  Doc : 
-        This is the backend of NAS Js written in Node.js application that uses the Express framework to create a web server that handles various HTTP requests. It includes middleware like cors, compression, and express.json() for handling CORS, compression, and JSON parsing, respectively. The server supports uploading files, JWT token management, user creation, file deletion, and file searching functionalities.
+ *  Doc 📄 : 
+        This is the backend of NAS Js written in Node.js application that uses the Express 
+        framework to create a web server that handles various HTTP requests. It includes middleware 
+        like cors, compression, and express.json() for handling CORS, compression, and JSON parsing, 
+        respectively. The server supports uploading files, JWT token management, user creation, file deletion, 
+        and file searching functionalities.
  *  
- *  Dependencies: 
+ *  Dependencies 🛠️ : 
  *      - express
         - cors
         - path
@@ -26,7 +30,7 @@
         - compression
         - multer
  *  
- *  Working :                              
+ *  Working ⚙️ :                              
 */
 
 
@@ -59,7 +63,6 @@ app.post('/getToken', (req, res) => {
   TokenHandler(req, res)
 })
 
-
 app.post('/newuser', (req, res) => {
   CreateUser(req, res);
 })
@@ -76,7 +79,7 @@ app.post('/search', (req, res) => {
   sendResp(req, res);
 })
 
-
+// Demo Only
 const checkAccessToken = (req, res, next) => {
   const accessToken = req.query.token;
   const UserName = req.query.name;
