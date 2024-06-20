@@ -1,5 +1,5 @@
 const fs = require('fs');
-const userFileManager = require('../../FileManger/filemanger');
+const userFileManager = require('../../JsonFileManger/filemanger');
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
@@ -20,7 +20,7 @@ const LoginHandler = (req, res) => {
                 UserData[payload].ip = clientIp;
                 UserData[payload].refreshToken = refreshToken
                 userFileManager.writeData('./Json/users.json', UserData);
-
+                UserData = null;
               res.json({ accessToken: accessToken, refreshToken: refreshToken })
         } 
         else {
@@ -33,7 +33,7 @@ const LoginHandler = (req, res) => {
     }
 }
 
-function isValidIP(ip) {
+const isValidIP = (ip) => {
     if(ip=="::1") return true;
     const ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
     const ipv6Regex = /^([0-9a-fA-F]{1,4}:){7}([0-9a-fA-F]{1,4}|:)$/;
@@ -49,7 +49,7 @@ const getClientIp = (req) => {
     return req.socket.remoteAddress;
 }
 
-function generateAccessToken(userSecret) {
+const generateAccessToken = (userSecret) => {
   return jwt.sign(userSecret, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1800s' })
 }
 

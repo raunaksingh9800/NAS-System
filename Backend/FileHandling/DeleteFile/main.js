@@ -1,5 +1,5 @@
 const fs = require('fs');
-const userFileManager = require('../FileManger/filemanger');
+const userFileManager = require('../../JsonFileManger/filemanger');
 /* 
     BUG
         ->  Deletes the whole json file data when request sent for a file which
