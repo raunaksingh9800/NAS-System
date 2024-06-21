@@ -15,6 +15,7 @@ const initializeFile = (filename)=> {
     }
 }
 
+
 const readData = (filename)=> {
     return JSON.parse(fs.readFileSync(filename, 'utf8'));
 }
