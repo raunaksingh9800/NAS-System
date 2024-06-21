@@ -60,10 +60,11 @@ const cors = require('cors')
 const path = require('path');
 const compression = require('compression')
 const serveIndex = require('serve-index')
+const express = require('express')
 
 //Internal Imports
-const CreateUser = require('./Newuser/main')
-const { LoginHandler } = require('./Login/main')
+const CreateUser = require('./Authentication/Newuser/main.js')
+const { LoginHandler } = require('./Authentication/Login/main')
 const { uploadhandler, uploadhandlerMiddlerwear } = require('./FileHandling/UploadFile/uploadhandler')
 const DeleteFileAPI = require('./FileHandling/DeleteFile/main')
 const { TokenHandler } = require('./JWT/GetToken/main')

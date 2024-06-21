@@ -3,7 +3,7 @@ const userFileManager = require('../../JsonFileManger/filemanger');
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
-let UserData = userFileManager.loadSessions('./Json/users.json')
+let UserData = userFileManager.loadSessions('./Database/Json/users.json')
 
 const TokenHandler = (req, res) => {
     const refreshToken = req.body.token;
