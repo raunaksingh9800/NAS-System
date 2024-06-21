@@ -1,6 +1,6 @@
 const fs = require('fs');
 const userFileManager = require('../../JsonFileManger/filemanger');
-const checkforUId =  userFileManager.loadSessions('./Json/users.json')
+const checkforUId =  userFileManager.loadSessions('./Database/Json/users.json')
 
 const uploadhandler = (req, res) => {
     const UIDToken = req.query.uid;
@@ -19,10 +19,10 @@ const uploadhandler = (req, res) => {
             [req.files[i].originalname] : fileUid
   
         }
-      userFileManager.initializeFile('./Json/userFile.json');
-      userFileManager.addUserFile('./Json/userFile.json', UIDToken, fileUid, fileData);
-      userFileManager.initializeFile('./Json/SearchIndex.json');
-      userFileManager.addUserSearchIndex('./Json/SearchIndex.json', UIDToken, SearchIndex);
+      userFileManager.initializeFile('./Database/Json/userFile.json');
+      userFileManager.addUserFile('./Database/Json/userFile.json', UIDToken, fileUid, fileData);
+      userFileManager.initializeFile('./Database/Json/SearchIndex.json');
+      userFileManager.addUserSearchIndex('./Database/Json/SearchIndex.json', UIDToken, SearchIndex);
     }
 
 

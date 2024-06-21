@@ -24,8 +24,8 @@ const CreateUser = (req, res) => {
 
   const uid = hashCredentials(username , password);
 
-  userFileManager.initializeFile('./Json/userFile.json');
-  userFileManager.addUserFile('./Json/userFile.json', uid, fileUid, fileData);
+  userFileManager.initializeFile('./Database/Json/userFile.json');
+  userFileManager.addUserFile('./Database/Json/userFile.json', uid, fileUid, fileData);
 
 
   const fileAuthKey = generateFileAuthKey();
@@ -44,10 +44,10 @@ const CreateUser = (req, res) => {
     }
   }
 
-  userFileManager.initializeFile('./Json/users.json');
-  userFileManager.addUser('./Json/users.json', uid, userData);
-  userFileManager.initializeFile('./Json/SearchIndex.json');
-  userFileManager.addUser('./Json/SearchIndex.json', uid, SearchIndex);
+  userFileManager.initializeFile('./Database/Json/users.json');
+  userFileManager.addUser('./Database/Json/users.json', uid, userData);
+  userFileManager.initializeFile('./Database/Json/SearchIndex.json');
+  userFileManager.addUser('./Database/Json/SearchIndex.json', uid, SearchIndex);
   res.send("ceated")
 
 

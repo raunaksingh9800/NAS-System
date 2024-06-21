@@ -9,6 +9,7 @@ const print = console.log;
 var ip = require("ip");
 
 
+
 const pingUrl = (url) => {
     return new Promise((resolve, reject) => {
         const protocol = url.startsWith('https') ? https : http;
@@ -76,7 +77,7 @@ const askYorN  = async (question) => {
     return ans.answer
 } 
 
-let CredFile = userFileManager.loadSessions('./Json/admincred.json')
+let CredFile = userFileManager.loadSessions('./Database/Json/admincred.json')
 const initForCred = async () => {
     const AUTHKEY = generateUID()
     const IP = ip.address()
